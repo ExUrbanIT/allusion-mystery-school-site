@@ -3,7 +3,7 @@ header {
     padding: 2rem 0 1rem;
     border-bottom: 1px solid rgba(255, 215, 0, 0.3);
 }
-@keyframes pulse-glow {
+@8keyframes pulse-glow {
     0% { 
         opacity: 0.7;
         text-shadow: 0 0 5px gold;
@@ -43,11 +43,27 @@ body {
     transform: scale(1.08);
 }
 
+.bowl-placeholder {
+    height: 200px;
+    margin: 2rem auto;
+    max-width: 400px;
+    border-radius: 50%;
+    border: 2px dashed gold;
+    background: radial-gradient(circle, rgba(255,215,0,0.1),
+    transparent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255,215,0,0.8);
+    font-style: italic;
+}
+
 .vault-entry {
     Max-width: 700px
-    margin: 2rem auto;
+    margin-top 2rem auto;
+    margin-bottom: 2rem;
     padding: 2rem;
-    background-color: rgba(255, 215, 0, 0.02);
+    background-color: rgba(255, 255, 0, 0.02);
     border-left: 3px solid gold;
     box-shadow: 0 0 20px rgba(255, 215, 0, 0.08);
     border-radius: 8px;
@@ -66,14 +82,52 @@ body {
 
 .entry-tagline {
     margin-top: 2rem
-    font-style: italic;
+    font-style italic;
     text-align: center;
     color: gold;
+}
+
+.healing-form input,
+.healing-form textarea {
+    background-color: rgba(0,0,0,0.6);
+    border: 1px solid gold;
+    color: gold;
+    margin-bottom: 1rem;
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.healing-form label {
+    color: rgba(255,215,0,0.8);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.healing-form button,
+.portal-button {
+    background-color: gold;
+    color: black;
+    font-weight: bold;
+    border: none;
+    padding: 0.75rem 2rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+}
+
+.healing-form button:hover,
+.portal-button:hover {
+background-color: crimson;
+color: white;
+box-shadow: 0 0 12px rgba(255, 0, 0, 0.5);
 }
 
 footer {
     text-align: center;
     padding: 2rem 
-    border-top: 1px solid rgba(255, 215, 0, 0.3);
+    border-top 1px solid rgba(255, 215, 0, 0.3);
     margin-top: 4rem;
 }
