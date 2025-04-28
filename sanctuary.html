@@ -6,10 +6,10 @@
     <title>Enter the Sanctuary</title>
     <link rel="stylesheet" href="style.css" />
 </head>
-<body> class="sanctuary-bg">
+<body class="sanctuary-bg">
 
     <!--Pixel load overlay (we'll animate this later)-->
-    <div class=""matrix-load -screen">Entering the Sanctuary...</div> 
+    <div class="matrix-load -screen">Entering the Sanctuary...</div> 
 
     <!--main visual-->
     <main class="sanctuary-container">
@@ -21,9 +21,22 @@
         <div class="rings-orbit"></div>
 
         <div class="doorway">
-            <button onlick=""openWormhole()" class="portal-button">Open the Door</button>
-            <h1>Welcome to the Sanctuary</h1>
-            <p>Here, we explore the mysteries of the universe and our place within it.</p>
-            <p>Join us on this journey of discovery and transformation.</p>
-</body>
+            <button onlick="openWormhole()" class="portal-button">Open the Door</button>
+        </div>
+    </main>
+
+    <div id="wormhole-overlay" style="display: none;">
+        <div class="wormhole-spiral"></div>
+    </div>"
+
+    <script>
+        function openWormhole() {
+            document.getElementById('wormhole-overlay').style.display = 'flex';
+
+            setTimeout(function() {
+                window.location.href = "sanctuary-interior.html";
+            }, 3000); // 3-second vortex delay
+        }
+     </script>
+    </body>     
 </html>
