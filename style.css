@@ -227,7 +227,7 @@ body.sanctuary-bg {
     animation: pixelFade 4s forwards;
 }
 
-@kayframes pixelFade {
+@keyframes pixelFade {
     0% {
         opacity: 1;
         filter: blur(0px);
@@ -273,7 +273,6 @@ body.sanctuary-bg {
         opacity: 1;
         transform: scale(1) rotateX(0deg);
     }
-}
 
 #wormhole-overlay {
     position: fixed;
@@ -287,8 +286,7 @@ body.sanctuary-bg {
     justify-content: center;
     z-index: 2000;
     animation: wormholeFadeIn 2s forwards;
-}
-}
+}}
 .wormhole-spiral {
     width: 150px;
     height: 150px;
