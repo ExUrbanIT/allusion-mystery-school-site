@@ -257,22 +257,24 @@ body.sanctuary-bg {
     align-items: center;
     opacity: 0;
     animation: doorwayReveal 6s forwards;
-    animation-delay: 5s; /* happens AFTER matrix intro fades */
-}
+        animation-delay: 5s; /* happens AFTER matrix intro fades */
+    }
 
-#keyframes doorwayReveal {
-    0% {
-        opacity: 0;
-        transform: scale(0.5) rotateX(90deg);
-    }
-    50% {
-        opacity: 0.5;
-        transform: scale(1.1) rotateX(45deg);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1) rotateX(0deg);
-    }
+
+@keyframes doorwayReveal {
+        0% {
+            opacity: 0;
+            transform: scale(0.5) rotateX(90deg);
+        }
+        50% {
+            opacity: 0.5;
+            transform: scale(1.1) rotateX(45deg);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1) rotateX(0deg);
+        }
+}
 
 #wormhole-overlay {
     position: fixed;
@@ -286,7 +288,7 @@ body.sanctuary-bg {
     justify-content: center;
     z-index: 2000;
     animation: wormholeFadeIn 2s forwards;
-}}
+}
 .wormhole-spiral {
     width: 150px;
     height: 150px;
@@ -296,12 +298,12 @@ body.sanctuary-bg {
     animation: spinWormhole 2s linear infinite;
 }
 
-@kayframes wormholeFadeIn {
+@keyframes wormholeFadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
 
-@kayframes spinWormhole {
+@keyframes spinWormhole {
     0% { transform: rotate(0deg); }
     100% {transform: rotate(360deg); }
 }
