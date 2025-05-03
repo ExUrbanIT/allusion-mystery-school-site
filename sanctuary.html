@@ -6,24 +6,43 @@
     <title>Enter the Sanctuary</title>
     <link rel="stylesheet" href="style.css" />
 </head>
-<body> class="sanctuary-bg">
 
+<body class="sanctuary-bg">
     <!--Pixel load overlay (we'll animate this later)-->
-    <div class=""matrix-load -screen">Entering the Sanctuary...</div> 
+    <div class="matrix-load screen">Entering the Sanctuary...</div> 
 
     <!--main visual-->
     <main class="sanctuary-container">
         <div class="floating-bridge"></div>
         <div class="moat"></div>
-        <div class="cube">
-            <div class="fire-runes">ᛃ ᛞ ᛉ ᚺ</div>
+        <div class="cube"> 
+            <div class="fire-runes">ᛃ ᛞ ᛉ H</div>
         </div>
         <div class="rings-orbit"></div>
-
+    <!--DOORWAY BUTTON-->
         <div class="doorway">
-            <button onlick=""openWormhole()" class="portal-button">Open the Door</button>
-            <h1>Welcome to the Sanctuary</h1>
-            <p>Here, we explore the mysteries of the universe and our place within it.</p>
-            <p>Join us on this journey of discovery and transformation.</p>
-</body>
+            <button onlick="openWormhole()" class="portal-button">Open the Door</button>           
+        </div>
+
+    <!--WORMHOLE OVERLAY-->
+        <div id=""wormhole-overlay" class=""wormhole-overlay" syle=""display: none;">
+            <p class="wormhole-text">Opening the Wormhole...</p>
+        </div>
+
+2        <!--These belong OUTSIDE the doorway-->
+        <h1>Welcome to the Sanctuary</h1>
+        <p>Here, we explore the mysteries of the universe and our place within it.</p>
+        <p>Join us on this journey of discovery and transformation.</p>
+    </main>
+
+    <script>
+        function openWormhole() {
+            const overlay = document.getElementById('wormhole-overlay');
+            overlay.style.display = 'flex';
+            setTimeout(() => {
+                window.location.href = "sanctuary-interior.html";
+            } ,2000);
+        }
+    </script>
+</body> 
 </html>
