@@ -1,143 +1,116 @@
 /* General Styles */
-body.sanctuary-bg {
+.body {
     margin: 0;
-    padding: 0;
-    background: linear-gradient(to bottom, #000, #0b0b1f);
-    color: #ffea00;
+    background: radial-gradient(circle at center,#000, #0b0b1f);
+    color: white;
     font-family: 'Orbitron', sans-serif;
   }
   
-  /* Matrix Load Screen */
-  .matrix-load-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: black;
-    color: lime;
-    font-family: 'Courier New', monospace;
-    font-size: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    letter-spacing: 0.2rem;
-    z-index: 1000;
-    animation: pixelFade 4s forwards;
-  }
-  
-  /* Portal Button */
-  .portal-button {
-    background: #ffea00;
-    border: none;
-    padding: 1rem 2rem;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 8px;
-    margin-top: 1rem;
-    transition: box-shadow 0.3s ease;
-  }
-  
-  .portal-button:hover {
-    box-shadow: 0 0 20px crimson;
-  }
-  
-  /* Doorway */
-  .doorway {
-    position: absolute;
-    top: 40%;
+.welcome-text {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.sanctuary-container {
+    animation: fadeIn 3s ease-in-out;
     display: flex;
     flex-direction: column;
     align-items: center;
-    opacity: 0;
-    animation: doorwayReveal 6s forwards;
-    animation-delay: 5s;
-  }
-  
-  /* Animations */
-  @keyframes pixelFade {
+    justify-content: center;
+    min-height: 100vh;
+    }    
+
+.floating-bridge {
+        width: 100%;
+        height: 50px;
+        background: repreating-linear-gradient(
+            45deg,
+            #444 0,
+            #444 10px,
+            #222 10px,
+            #222 20px
+        );
+        box-shadow: 0 0 20px crimson;
+    }
+
+    .moat {
+        width: 80%;
+        height: 100px;
+        border-radius: 50%;
+        background: radial-gradient(circle,#004488, #001122);
+        margin: 1rem 0;
+      }
+
+      .cube {
+        width: 100px;
+        height: 100px;
+        background-color: gold;
+        animation: spinCube 6s linear infinite;
+        transform-style: preserve-3d;
+        display: flex;
+        align-items: center;
+        position: relative;
+        justify-content: center;
+    }
+    
+@keyframes spinCube {
     0% {
-      opacity: 1;
-      filter: blur(0px);
-      letter-spacing: 0.2rem;
-    }
-    50% {
-      opacity: 0.8;
-      filter: blur(2px);
-      letter-spacing: 1rem;
-    }
-    80% {
-      opacity: 0.3;
-      filter: blur(5px);
-      letter-spacing: 2rem;
+        transform: rotateX(0deg)
+        rotateY(0deg);
     }
     100% {
-      opacity: 0;
-      filter: blur(10px);
-      pointer-events: none;
+        transform: rotateX(360deg)
+8rotateY(360);
     }
-  }
-  
-  @keyframes doorwayReveal {
-    0% {
-      opacity: 0;
-      transform: scale(0.5) rotateX(90deg);
-    }
-    50% {
-      opacity: 0.5;
-      transform: scale(1.1) rotateX(45deg);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1) rotateX(0deg);
-    }
-  }
-  
-  /* Wormhole Overlay */
-  #wormhole-overlay {
+}
+
+.fire-runes {
+    color: crimson;
+    font-size: 2rem;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.doorway {
+    margin: 1rem 0;
+}
+
+.portal-button {
+    padding: 1rem 2rem;
+    background: gold;
+    border: none;
+    font-size: 1rem;
+    font-family: 'Orbitron' , sans-serif;
+    cursor: pointer;
+    box-shadow: 0 0 20px crimson;
+}
+
+#wormhole-overlay {
+    display: none;
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 0; left: 0;
     width: 100%;
     height: 100%;
     background: radial-gradient(circle at center, black, #0b0b1f);
-    display: flex;
-    align-items: center;
     justify-content: center;
     z-index: 2000;
     animation: wormholeFadeIn 2s forwards;
-  }
-  
-  .wormhole-spiral {
+}
+
+@keyframes wormholeFadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.wormhole-spiral {
     width: 150px;
     height: 150px;
     border: 10px solid gold;
     border-radius: 50%;
     border-top: 10px solid crimson;
     animation: spinWormhole 2s linear infinite;
-  }
-  
-  @keyframes wormholeFadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-  
-  @keyframes spinWormhole {
+}
+
+@keyframes spinWormhole {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-  }
-  
-  /* Text Placeholder */
-  .bowl-placeholder {
-    height: 200px;
-    margin: 2rem auto;
-    max-width: 400px;
-    border-radius: 50%;
-    border: 2px dashed gold;
-    background: radial-gradient(circle, rgba(255,215,0,0.1), transparent);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgba(255,215,0,0.8);
-    font-style: italic;
-  }
+}
